@@ -1,3 +1,8 @@
+function disable (x){
+    x.disabled = true;
+}
+
+
 document.getElementById('player-button1').addEventListener('click',function(){
     const playerName = document.getElementById('player-name1');
     const playerNameInnerText1 = playerName.innerText;
@@ -7,6 +12,12 @@ document.getElementById('player-button1').addEventListener('click',function(){
     const li = document.createElement('li');
     li.innerText = playerNameInnerText1;
     listContainer.appendChild(li);
+
+
+    if(li > 5){
+        alert('You cannot add more players')
+        return;
+    }
 
 })
 document.getElementById('player-button2').addEventListener('click',function(){
@@ -65,3 +76,4 @@ document.getElementById('player-button6').addEventListener('click',function(){
     listContainer.appendChild(li);
 
 })
+
