@@ -37,4 +37,42 @@ function addToCart (element){
 
     document.getElementById('Select-players').innerText =playerArray.length;
     playerDisplay(playerArray);
+
+
+    document.getElementById('calculate').addEventListener('click',function click(){
+        const playerPrice = document.getElementById('player-price');
+        const playerPriceValueString = playerPrice.value ;
+        const playerPriceValue  =parseFloat(playerPriceValueString); 
+         
+        
+        const playerExpense = document.getElementById('Player-Expense');
+        const TotalPlayerExpense = playerPriceValue * playerArray.length;
+        playerExpense.innerText = TotalPlayerExpense;
+
+      
+        document.getElementById('total-calculate-btn').addEventListener('click',function (){
+
+            const managerPrice = document.getElementById('manager');
+            const managerPriceValueString = managerPrice.value ;
+            const managerPriceValue  =parseFloat(managerPriceValueString); 
+        
+            const coachPrice = document.getElementById('coach');
+            const coachPriceValueString = coachPrice.value ;
+            const coachPriceValue  =parseFloat(coachPriceValueString); 
+            
+            const totalPlayerPrice = TotalPlayerExpense + managerPriceValue + coachPriceValue ;
+            console.log(totalPlayerPrice);
+
+
+        const totalPlayerExpense = document.getElementById('total-player-expense'); 
+        totalPlayerExpense.innerText = totalPlayerPrice;
+        
+        })
+        
+
+
+       
+    })
 }
+
+
