@@ -20,8 +20,9 @@ function playerDisplay (playerList)
     if(playerArray.length>5){
         
         alert('You cannot add more');
-    
+       
      }
+  
 }
 
 
@@ -34,6 +35,8 @@ const playerArray =[];
 //    Object push in arrary section
 function addToCart (element){
     const playerName = element.parentNode.children[0].innerText;
+    element.style.cursor = 'not-allowed'
+    element.disabled = true;
    
     const playerObj ={
         playerName : playerName 
@@ -44,6 +47,7 @@ function addToCart (element){
     // limit seleted players
 if(playerArray.length <= 5){
     document.getElementById('Select-players').innerText =playerArray.length;
+    
 }
 playerDisplay(playerArray);
 
@@ -76,11 +80,7 @@ playerDisplay(playerArray);
         const totalPlayerExpense = document.getElementById('total-player-expense'); 
         totalPlayerExpense.innerText = totalPlayerPrice;
         
-        })
-        
-
-
-       
+        })    
     })
 }
 
