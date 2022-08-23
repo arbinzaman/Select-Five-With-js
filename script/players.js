@@ -1,6 +1,6 @@
-// function disable (x){
-//     x.disabled = true;
-// }
+function disable (x){
+    x.disabled = true;
+}
 
 function playerDisplay (playerList)
 {
