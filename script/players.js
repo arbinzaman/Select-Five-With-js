@@ -16,12 +16,16 @@ function playerDisplay (playerList)
         const li = document.createElement('li');
         li.innerText = newPlayerName;
         listBody.appendChild(li);
+      
+
     }  
-    
+  
 
     if(playerArray.length>5){
-        
+       
         alert('You cannot add more');
+    
+    
        
     }
 
