@@ -10,7 +10,7 @@ function playerDisplay (playerList)
 
     const listBody =document.getElementById('list-container')
     listBody.innerText='';
-    for( let i=0; i<playerList.length; i++){
+    for( let i=0; i<5; i++){
     
         const newPlayerName = playerArray[i].playerName;
         const li = document.createElement('li');
@@ -65,7 +65,7 @@ playerDisplay(playerArray);
         const playerExpense = document.getElementById('Player-Expense');
         const TotalPlayerExpense = playerPriceValue * newSelectedPlayers;
         playerExpense.innerText = TotalPlayerExpense;
-
+       
       // added Total player button button functionality
         document.getElementById('total-calculate-btn').addEventListener('click',function (){
 
@@ -82,7 +82,8 @@ playerDisplay(playerArray);
 
         const totalPlayerExpense = document.getElementById('total-player-expense'); 
         totalPlayerExpense.innerText = totalPlayerPrice;
-        
+
         })    
     })
 }
+
